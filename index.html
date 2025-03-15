@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Uber Clone</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-top">
+            <nav class="main-nav">
+                <h1 class="logo">Uber</h1>
+                <ul id="desk-nav">
+
+                    <li><a href="#" class="hide">Ride</a></li>
+                    <li><a href="#" class="hide">Drive</a></li>
+                    <li><a href="#" class="hide">Uber Eats</a></li>
+                    <li class="dropdown" id="aboutDropdown">
+                        <span class="dropdown-toggle">
+                            About
+                            <svg class="arrow" width="15" height="12" viewBox="0 0 12 12">
+                                <polyline points="2,4 6,8 10,4" stroke="white" stroke-width="2" fill="none" />
+                            </svg>
+                  
+                        </span>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Team</a></li>
+                            <li><a href="#">Mission</a></li>
+                        </ul>
+                    </li>
+
+
+                </ul>
+
+
+            </nav>
+        </div>
+        <div class="header-bottom">
+            <div class="lang-icon" id="desk">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Outer Circle (Globe) -->
+                    <circle cx="12" cy="12" r="10" stroke="white" stroke-width="2" fill="none"/>
+                    
+                    <!-- Longitude Lines -->
+                    <path d="M12 2C16 2 20 6 20 12s-4 10-8 10" stroke="white" stroke-width="1.2" fill="none"/>
+                    <path d="M12 2C8 2 4 6 4 12s4 10 8 10" stroke="white" stroke-width="1.2" fill="none"/>
+                    <path d="M15 2C17 6 17 18 15 22" stroke="white" stroke-width="1.2" fill="none"/>
+                    <path d="M9 2C7 6 7 18 9 22" stroke="white" stroke-width="1.2" fill="none"/>
+                  
+                    <!-- Latitude Lines -->
+                    <path d="M3 7h18" stroke="white" stroke-width="1.2"/>
+                    <path d="M3 10h18" stroke="white" stroke-width="1.2"/>
+                    <path d="M3 14h18" stroke="white" stroke-width="1.2"/>
+                    <path d="M3 17h18" stroke="white" stroke-width="1.2"/>
+                  </svg>
+
+                <span>En</span>
+            </div>
+            <a href="#" class="hide">Help</a>
+
+            <a href="#">Login</a>
+            <a href="#" class="sign" style="color: #000;">Sign Up</a>
+            <div class="hamburger">
+                &#9776;
+            </div>
+
+        </div>
+
+    </header>
+    <nav class="mobile-nav">
+        <div class="mobile-nav-content">
+            <div class="close-btn">&times;</div>
+            <ul>
+                <li><a href="#">Ride</a></li>
+                <li><a href="#">Drive</a></li>
+                <li><a href="#">Uber Eats</a></li>
+                <li class="dropdown" id="aboutDropdown">
+                    <span class="dropdown-toggle" style="color: #333;">
+                        About
+                        <svg class="arrow" width="15" height="12" viewBox="0 0 12 12">
+                        <polyline points="2,4 6,8 10,4" stroke="black" stroke-width="2" fill="none" />
+                        </svg>
+
+                    </span>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Team</a></li>
+                        <li><a href="#">Mission</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <div class="lang-icon" id="lang">
+                        <svg width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="1" xmlns="http://www.w3.org/2000/svg">
+    
+                        <circle cx="12" cy="12" r="10"/>
+
+                            <path d="M8 12c0 5 2 9 4 9s4-4 4-9-2-9-4-9-4 4-4 9z"/>
+                            <path d="M5 12c0 5 3 9 7 9s7-4 7-9-3-9-7-9-7 4-7 9z"/>
+                            <path d="M2 12h20"/> 
+                            <path d="M4 16c2.5 1.8 5.5 3 8 3s5.5-1.2 8-3"/>  
+                            <path d="M4 8c2.5-1.8 5.5-3 8-3s5.5 1.2 8 3"/>  
+                            <path d="M3 14c2.8 2 6 3.5 9 3.5s6.2-1.5 9-3.5"/> 
+                            <path d="M3 10c2.8-2 6-3.5 9-3.5s6.2 1.5 9 3.5"/>  
+                    </svg>
+
+                        <span style="color: #000;">En</span>
+                    </div>
+
+                </li>
+
+            </ul>
+        </div>
+    </nav>
+
+
+    <main class="grid-container">
+
+        <section class="hero" id="hero">
+
+            <h1>Go anywhere with Uber</h1>
+
+            <section class="ride-form">
+                <form>
+                    <div class="form-row">
+                        <input type="text" id="pickup" name="pickup" placeholder="Pick-up Location">
+                    </div>
+                    <div class="form-row">
+                        <input type="text" id="dropoff" name="dropoff" placeholder="Drop-off Location">
+                    </div>
+                    <div class="form-row">
+                        <div class="form-col">
+                            <input type="date" id="date" name="date" placeholder="Today">
+                        </div>
+                        <div class="form-col">
+
+                            <input type="time" id="time" name="time" placeholder="Now">
+                        </div>
+                    </div>
+                    <div class="form-row" id="ride-type">
+                        <div class="form-col">
+                            <button type="submit" id="btn">See Prices</button>
+                        </div>
+                        <div class="form-col">
+                            <div>
+                                <a href="#" class="sign-link" id="sign-link"> 
+                                 Don't have an Uber account ? Sign up
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </form>
+            </section>
+        </section>
+
+
+        <section class="hero">
+            <img src="image/pic1.jpg" alt="">
+        </section>
+
+
+        <section class="hero">
+            <h1>Login to see your recent activity </h1>
+            <p>
+                View past trips, tailored suggestions, support resources, and more
+            </p>
+
+            <div>
+                <button class="log">
+              <a href="#">Log in to your account<a>
+            </button>
+            </div>
+            <div>
+                <a href="#" class="sign-link"> Don't have an Uber account ? Sign up</a>
+            </div>
+
+
+        </section>
+
+        <section class="hero">
+            <img src="image/pic1.jpg" alt="">
+        </section>
+
+        <section class="hero">
+            <img src="image/pic2.jpg" alt="">
+        </section>
+
+
+        <section class="hero" id="hr2">
+            <h1>
+                Drive when you want, make what you need
+            </h1>
+            <p>
+                Make money on your schedule with deliveries or rides-or both. You can use your own car or choose a rental through Uber.
+            </p>
+
+
+            <div>
+                <button class="log">
+                <a href="#">Get started<a>
+              </button> &nbsp;&nbsp;
+
+                <a href="#" class="sign-link"> Already have an account ? Sign in</a>
+            </div>
+
+
+        </section>
+
+        <section class="hero" id="check">
+            <h1 class="know">The Uber you know, reimagined for business</h1>
+            <p>
+                Uber for Business is a platform for managing global rides and meals, and local deliveries, for companies of any size.
+            </p>
+
+            <div>
+                <button class="log">
+              <a href="#">Get started<a>
+            </button> &nbsp;&nbsp;
+
+                <a href="#" class="sign-link">Check out solutions</a>
+            </div>
+
+
+        </section>
+
+        <section class="hero">
+            <img src="image/pic3.jpg" alt="">
+        </section>
+
+
+    </main>
+    <div id="popMessage"></div>
+
+    <div id="cookieBox">
+        <p>Uber and its third-party partners use cookies. Enable cookies?</p>
+        <button id="cookieSettings">Cookie Settings</button>
+        <button id="cookieDisable">Disable Cookies</button>
+        <button id="cookieAccept">Accept All</button>
+    </div>
+
+
+
+    <footer>
+        <section class="qr">
+
+            <h2>It’s easier in the apps</h2>
+
+            <div class="qr-code">
+                <div class="uber-app">
+                    <img src="image/appstore.png" alt="">
+                    <p>download</p>
+                </div>
+
+                <div class="driver-app">
+                    <img src="image/playstore.png" alt="">
+                    <p>download</p>
+                </div>
+            </div>
+
+        </section>
+        <div class="footer">
+
+
+
+            <h1>Uber</h1>
+            <div><a href="">Visit Help Center</a></div>
+
+            <div class="footer-list">
+                <ul>
+                    <li>
+                        <h3>Company</h3>
+                    </li>
+                    <li><a href="#" class="foot">Our offerings</a></li>
+                    <li><a href="#" class="foot">Newsroom</a></li>
+                    <li><a href="#" class="foot">Investor</a></li>
+                    <li><a href="#" class="foot">Blogs</a></li>
+                    <li><a href="#" class="foot">Career</a></li>
+                </ul>
+
+                <ul>
+                    <li>
+                        <h3>Product</h3>
+                    </li>
+                    <li><a href="#" class="foot">Ride</a></li>
+                    <li><a href="#" class="foot">Drive</a></li>
+                    <li><a href="#" class="foot">Eat</a></li>
+                    <li><a href="#" class="foot">Uber Fresight</a></li>
+                    <li><a href="#" class="foot">Gift cards</a></li>
+                </ul>
+                <ul>
+                    <li>
+                        <h3>Global Citizenship </h3>
+                    </li>
+                    <li><a href="#" class="foot">Safety</a></li>
+                    <li><a href="#" class="foot">Sustainability</a></li>
+                </ul>
+                <ul>
+                    <li>
+                        <h3>Travels</h3>
+                    </li>
+                    <li><a href="#" class="foot">Reserve</a></li>
+                    <li><a href="#" class="foot">Airports</a></li>
+                    <li><a href="#">Cities</a></li>
+                </ul>
+            </div>
+            <div class="term-social">
+                <div class="social">
+                    <ul>
+                        <li>
+                            <a href=""><img src="image/fb.png" alt="Facebook"></a>
+                        </li>
+                        <li>
+                            <a href=""><img src="image/twitter.png" alt="Twitter"></a>
+                        </li>
+                        <li>
+                            <a href=""><img src="image/fb.png" alt="youtube"></a>
+                        </li>
+                        <li>
+                            <a href=""><img src="image/Linkedin.png" alt="Linkedin"></a>
+                        </li>
+                        <li>
+                            <a href=""><img src="image/insta.png" alt="instagram"></a>
+                        </li>
+
+                    </ul>
+                </div>
+
+                <div class="social">
+                    <ul>
+                        <li>
+                            <div class="header-bottom">
+                                <div class="lang-icon">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <!-- Outer Circle (Globe) -->
+                                        <circle cx="12" cy="12" r="10" stroke="white" stroke-width="2" fill="none"/>
+                                        
+                                        <!-- Longitude Lines -->
+                                        <path d="M12 2C16 2 20 6 20 12s-4 10-8 10" stroke="white" stroke-width="1.2" fill="none"/>
+                                        <path d="M12 2C8 2 4 6 4 12s4 10 8 10" stroke="white" stroke-width="1.2" fill="none"/>
+                                        <path d="M15 2C17 6 17 18 15 22" stroke="white" stroke-width="1.2" fill="none"/>
+                                        <path d="M9 2C7 6 7 18 9 22" stroke="white" stroke-width="1.2" fill="none"/>
+                                      
+                                        <!-- Latitude Lines -->
+                                        <path d="M3 7h18" stroke="white" stroke-width="1.2"/>
+                                        <path d="M3 10h18" stroke="white" stroke-width="1.2"/>
+                                        <path d="M3 14h18" stroke="white" stroke-width="1.2"/>
+                                        <path d="M3 17h18" stroke="white" stroke-width="1.2"/>
+                                      </svg>
+
+                                    <span>En</span>
+                                </div>
+
+                        </li>
+                        <li>
+                            <div class="lang-icon">
+
+                                <svg width="25" height="25" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                
+                                <path fill="white" stroke="white" stroke-width="1.5" d="M12 2C8.13 2 5 5.13 5 9c0 4.5 7 11 7 11s7-6.5 7-11c0-3.87-3.13-7-7-7z"/>
+                            
+                                <rect x="8" y="8" width="8" height="3" fill="black"/>
+                              </svg>
+                                <span>Kaduna</span>
+                            </div>
+
+
+                        </li>
+
+                    </ul>
+                    </div>
+
+
+
+                </div>
+                <div class="social">
+                    <ul class="download">
+                        <li>
+                            <a href=""><img src="image/playstore.png" alt="playstore"></a>
+                        </li>
+                        <li>
+                            <a href=""><img src="image/appstore.png" alt="appstore"></a>
+                        </li>
+
+                    </ul>
+                    <div id="backToTop">
+                        <svg viewBox="0 0 24 24">
+                        <polyline points="4,12 12,4 20,12"></polyline>
+                        <line x1="12" y1="4" x2="12" y2="20"></line>
+                    </svg>
+                    </div>
+
+
+                </div>
+                <div class="term-social">
+                    <p>&copy; 2025 Uber Technologies inc. All rights reserved.</p>
+                    <div class="social">
+                        <ul>
+                            <li>
+                                <a href="">Terms</a>
+                            </li>
+                            <li>
+                                <a href="">Conditions</a>
+                            </li>
+                            <li>
+                                <a href="">Privacy</a>
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+    </footer>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
